@@ -134,7 +134,7 @@ main = do
         graph2D :: Graph2DWithRestictions
         graph2D = (Graph2DWithRestictions $ A.listArray ((0, 0), (sizeY - 1, sizeX - 1)) intArr)
 
-        cost = map (findShortestDistance graph2D (0 :: Int, 0 :: Int)) $ zip (repeat (sizeY - 1, sizeX - 1)) [(n, d) | n <- [1..10], d <- [D, R]]
+        cost = map (findShortestDistance graph2D (0 :: Int, 0 :: Int)) $ zip (repeat (sizeY - 1, sizeX - 1)) [(n, d) | n <- [4..10], d <- [D, R]]
         res = filter (/=Infinity) cost
     --mapM_ print parsed_data
     --print graph2D 
